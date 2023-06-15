@@ -1,5 +1,5 @@
 #!/bin/bash
-#include <.stdio>
+#include <stdio.h>
 /**
  *  * Description: main - Prints a line with puts.
  *   * Return: 0 if success.
