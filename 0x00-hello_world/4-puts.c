@@ -1,4 +1,3 @@
-#!/bin/bash
 #include <stdio.h>
 /**
  *  * Description: main - Prints a line with puts.
