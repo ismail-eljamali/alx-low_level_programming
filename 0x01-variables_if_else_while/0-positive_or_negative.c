@@ -1,6 +1,15 @@
 #include<stdio.h>
 #include<time.h>
 #include<stdlib.h>
+
+/**
+ * main - time
+ *
+ * Description: validation
+ *
+ * Return: 0 (success)
+ */
+
 int main(void)
 {
 	int n;
