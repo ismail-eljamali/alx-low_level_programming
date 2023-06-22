@@ -3,10 +3,10 @@
 
 /**
  * _putchar - write character c
- * @c : character to print
+ * @c: character to print
  *
- * Return : success 1
- * error : -1
+ * Return: success 1
+ * error: -1
  */
 int _putchar (char c)
 {
