@@ -9,7 +9,7 @@ int main(void)
 {
 	long x, maxy;
 	long n = 612852475143;
-	double square = sr(n);
+	double square = sqrt(n);
 
 	for (x = 1; x <= square; x++)
 	{
