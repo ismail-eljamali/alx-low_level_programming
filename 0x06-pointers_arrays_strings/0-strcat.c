@@ -5,6 +5,7 @@
  * _strcat - concaten 2 strings
  * @dest: input value
  * @src: input value
+ *
  * Return: void
  */
 
