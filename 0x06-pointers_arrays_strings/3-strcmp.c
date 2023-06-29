@@ -1,8 +1,7 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * _strcmp - compare pointer to 2 strings
+ * _strcmp - compare pointer to two strings
  * @s1: first pointer
  * @s2: second pointer
  * Return: condition s1 && s2
