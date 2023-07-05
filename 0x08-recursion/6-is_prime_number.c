@@ -4,11 +4,11 @@
 int check_prime(int n, int i);
 
 /**
- * _is_prime_number - return square root
+ * is_prime_number - return square root
  * @n: number
  * Return: result square root
  */
-int _is_prime_number(int n)
+int is_prime_number(int n)
 {
 	return (check_prime(n, 2));
 }
