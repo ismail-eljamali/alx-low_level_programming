@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	unsigned int j, sum = 0;
 	char *e;
 
-	for (argc > 1)
+	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
