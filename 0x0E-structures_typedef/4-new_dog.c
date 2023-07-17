@@ -6,7 +6,7 @@
  * @str: string to get a lenght
  * Return: lenght of @str
  */
-int strlen(const char *str)
+int _strlen(const char *str)
 {
 	int lenght = 0;
 
@@ -21,7 +21,7 @@ int strlen(const char *str)
  * @dest: copy string to here
  * Return: @dest
  */
-char *strcopy(char *dest, char *src)
+char *_strcopy(char *dest, char *src)
 {
 	int i;
 
