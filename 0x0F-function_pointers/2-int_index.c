@@ -8,7 +8,7 @@
  * @cmp: compare function
  * Return: index
  */
-void int_index(int *array, size_t size, void (*cmp)(int))
+void int_index(int *array, int size, int (*cmp)(int))
 {
 	int i = 0;
 
