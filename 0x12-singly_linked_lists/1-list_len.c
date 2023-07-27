@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "lists.h"
+#include <stdlib.h>
 
 /**
  * list_len - return number the elements of a list_t list
