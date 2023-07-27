@@ -8,7 +8,7 @@
  * @str: string to add the node
  * Return: adress
  */
-list_t *add_node(list_t *head, const char *str)
+list_t *add_node(list_t **head, const char *str)
 {
 	list_t *temp;
 	int length = 0;
@@ -22,7 +22,7 @@ list_t *add_node(list_t *head, const char *str)
 
 	temp->len = length;
 	temp->str = strdup(str);
-	temp->next = _head;
+	temp->next = *head;
 	*head = temp;
 	return (temp);
 }
