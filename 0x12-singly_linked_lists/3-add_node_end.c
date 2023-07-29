@@ -2,7 +2,8 @@
 #include "lists.h"
 #include <stdlib.h>
 #include <string.h>
-
+int len(const char *str);
+list_t *create_node(const char *str);
 /**
  * add_node_end - adds a new node at the end of a list_t list
  * @head: head of the linked
@@ -12,28 +13,58 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new_node, *current_node;
-	size_t n;
 
-	new_node = malloc(sizeof(list_t));
+	current_node = *head;
+	if (head == NULL)
+	{
+		return (NULL);
+	}
+	new_node = create_node(str);
 	if (new_node == NULL)
 		return (NULL);
 
-	new_node->strdup(str);
-	for (n = 0; str[n]; n++)
-		;
-	new_node->len = n;
-	new_node->next = NULL;
-	current_node = *head;
-
-	if (current_node == NULL)
+	if (*head == NULL)
 	{
 		*head = new_node;
+		return (*head);
 	}
-	else
-	{
-		while (current_node->next != NULL)
-			current_node = current_node->next;
-		current_node->next = new_node;
-	}
+	while (current_node->next != NULL)
+		current_node = current_node->next;
+	current_node->next = new_node;
 	return (*head);
+}
+/**
+ * create_node - create nodes function
+ * @str: string
+ * Return: pointer
+ */
+list_t *create_node(const char *str)
+{
+	list_t *new_code;
+
+	new_code = malloc(sizeof(list_t));
+	if (new_code == NULL)
+		return (NULL);
+	new_node->str = strdup(str);
+	new_node->len = len(str);
+	new_node->next = NULL;
+	return (new_code);
+}
+/**
+ * len - length of string
+ * @str: string
+ * Return: amount
+ */
+int len(const char *str)
+{
+	int i;
+
+	if (str == NULL)
+		return (0);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
