@@ -1,9 +1,9 @@
 #include "lists.h"
-void ComeFirstbyCTC(void)__attribute__ ((constructor));
+void __attribute__((constructor)) hare(void);
 /**
- * ComeFirstbyCTC - Function that runs before the main function
+ * hare - Function that runs before the main function
  */
-void ComeFirstbyCTC(void)
+void hare(void)
 {
 	printf("You're beat! and yet, you must allow,\n");
 	printf("I bore my house upon my back!\n");
