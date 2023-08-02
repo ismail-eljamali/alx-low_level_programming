@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
 
 /**
  * add_nodeint_end - prints a linked
@@ -16,7 +15,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		return (NULL);
 
 	new->n = n;
-	new->next = *head;
+	new->next = NULL;
 
 	if (*head == NULL)
 		*head = new;
@@ -27,4 +26,5 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 			last = last->next;
 		last->next = new;
 	}
+	return (*head);
 }
