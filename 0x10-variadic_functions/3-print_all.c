@@ -1,24 +1,50 @@
 #include "variadic_functions.h"
+#include <stdarg.h>
+#include <stdio.h>
 
 /**
- * format_char - format character
- * @separator: string separator
- * @ap: argument pointer
+ * print_all - prints anything
+ * @format: list of types of arguments passed to the function
  */
-void format_char(char *separator, const unsigned int n, ...)
+void print_all(const char * const format, ...)
 {
-	int i = n;
-	char *str;
-	va_list ap;
+	int i = 0;
+	char *str, *sep = "";
 
-	if (!n)
+	va_list list;
+
+	va_start(list, format);
+
+	if (format)
 	{
-		printf("\n");
-		return;
+		while (format[i])
+		{
+			switch (format[i])
+			{
+				case 'c':
+					printf("%s%c", sep, va_arg(list, int));
+					break;
+				case 'i':
+					printf("%s%d", sep, va_arg(list, int));
+					break;
+				case 'f':
+					printf("%s%f", sep, va_arg(list, double));
+					break;
+				case 's':
+					str = va_arg(list, char *);
+					if (!str)
+						str = "(nil)";
+					printf("%s%s", sep, str);
+					break;
+				default:
+					i++;
+					continue;
+			}
+			sep = ", ";
+			i++;
+		}
 	}
-	va_start(ap, n);
-	while (i--)
-		printf("%s%s", (str = va_arg(ap, char *)) ? str : "(nil)",
-				i ? (separator ? separator : "") : "\n");
-	va_end(ap);
+
+	printf("\n");
+	va_end(list);
 }
